@@ -222,6 +222,11 @@
             flex-direction: column;
             align-items: center; /* Center the fields horizontally */
             justify-content: center; /* Center the fields vertically */
+            width: 100%; /* Ensure the form takes full width */
+            max-width: 400px; /* Limit the form width */
+            margin: 0 auto; /* Center the form horizontally */
+            text-align: center; /* Center-align the form content */
+            gap: 15px; /* Add consistent spacing between fields */
         }
         .modal input {
             width: 80%; /* Adjust width for better alignment */
@@ -235,13 +240,16 @@
             font-size: 1rem;
             outline: none;
             transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+            display: block; /* Ensure inputs are block-level elements */
+            margin: 10px auto; /* Center inputs horizontally */
         }
         .modal input:hover {
             background: linear-gradient(to right, #8a2be2, #3b82f6); /* Brightened gradient */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect */
             transform: scale(1.02); /* Slightly enlarge on hover */
         }
-        .modal .submit-button {
+        .modal .submit-button,
+        .modal .login-button {
             width: 100%;
             padding: 10px 20px; /* Make the button smaller */
             margin-top: 20px;
@@ -253,8 +261,11 @@
             border-radius: 25px; /* Add more rounded edges */
             cursor: pointer;
             transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+            display: block; /* Ensure buttons are block-level elements */
+            margin: 10px auto; /* Center buttons horizontally */
         }
-        .modal .submit-button:hover {
+        .modal .submit-button:hover,
+        .modal .login-button:hover {
             background: linear-gradient(to right, #8a2be2, #3b82f6); /* Brightened gradient */
             transform: scale(1.05); /* Slightly enlarge on hover */
             box-shadow: 0 6px 12px rgba(106, 17, 203, 0.5); /* Add shadow effect */
@@ -504,10 +515,16 @@
             position: relative;
             width: 80%; /* Match input width */
             margin: 15px 0;
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Vertically align icon and input */
+            justify-content: center; /* Center content horizontally */
+            gap: 10px; /* Add spacing between icon and input */
         }
         .input-container input {
             width: 100%;
             padding-left: 40px; /* Ensure space for the icon */
+            flex: 1; /* Allow input to take remaining space */
+            margin: 0; /* Remove extra margins */
         }
         .input-container .icon {
             position: absolute;
@@ -516,6 +533,7 @@
             transform: translateY(-50%);
             font-size: 1.2rem;
             color: #b9bbbe; /* Subtle icon color */
+            flex-shrink: 0; /* Prevent icon from shrinking */
         }
         .beta-message {
             position: fixed;
@@ -614,6 +632,66 @@
         .waitlist-popup .submit-button:hover {
             background: #4752c4;
             transform: scale(1.05);
+        }
+
+        /* Responsive styles for mobile phones */
+        @media (max-width: 768px) {
+            header {
+                height: auto;
+                padding: 20px;
+                text-align: center;
+            }
+            h1 {
+                font-size: 1.5rem; /* Adjust font size for smaller screens */
+            }
+            .description-box {
+                width: 90%; /* Adjust width for smaller screens */
+                font-size: 0.9rem; /* Adjust font size */
+            }
+            .info-box-container {
+                flex-direction: column; /* Stack info boxes vertically */
+                gap: 20px; /* Add spacing between boxes */
+            }
+            .info-box {
+                margin: 0; /* Remove horizontal margins */
+            }
+            .waitlist-section {
+                width: 90%; /* Adjust width for smaller screens */
+                font-size: 0.9rem; /* Adjust font size */
+            }
+            .bottom-box-container {
+                flex-direction: column; /* Stack bottom boxes vertically */
+                gap: 20px; /* Add spacing between boxes */
+            }
+            .bottom-box {
+                margin: 0; /* Remove horizontal margins */
+            }
+            .signup-button {
+                top: 10px;
+                left: 10px;
+                padding: 10px 20px; /* Adjust padding for smaller screens */
+                font-size: 0.9rem; /* Adjust font size */
+            }
+            .scroll-arrow {
+                font-size: 1.5rem; /* Adjust size for smaller screens */
+            }
+            .modal {
+                width: 90%; /* Adjust modal width for smaller screens */
+                padding: 20px; /* Adjust padding */
+            }
+            .ask-ai-modal {
+                width: 90%; /* Adjust modal width for smaller screens */
+                height: 70%; /* Adjust height */
+                padding: 20px; /* Adjust padding */
+            }
+            .feedback-modal {
+                width: 90%; /* Adjust modal width for smaller screens */
+                padding: 20px; /* Adjust padding */
+            }
+            .waitlist-popup {
+                width: 90%; /* Adjust popup width for smaller screens */
+                padding: 20px; /* Adjust padding */
+            }
         }
     </style>
 </head>
