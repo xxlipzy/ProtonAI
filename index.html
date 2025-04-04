@@ -1,4 +1,3 @@
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,13 +38,13 @@
             position: fixed;
             top: 20px;
             left: 20px;
-            padding: 12px 24px;
+            padding: 12px 24px; /* Restore original size */
             background: linear-gradient(to right, #6a11cb, #2575fc);
             color: white;
-            font-size: 1rem;
+            font-size: 1rem; /* Restore original font size */
             font-weight: 600;
             border: none;
-            border-radius: 25px;
+            border-radius: 25px; /* Restore original rounded edges */
             cursor: pointer;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -244,14 +243,14 @@
         }
         .modal .submit-button {
             width: 100%;
-            padding: 15px;
+            padding: 10px 20px; /* Make the button smaller */
             margin-top: 20px;
             background: linear-gradient(to right, #6a11cb, #2575fc);
             color: white;
-            font-size: 1.2rem;
+            font-size: 1rem; /* Adjust font size */
             font-weight: 600;
             border: none;
-            border-radius: 8px;
+            border-radius: 25px; /* Add more rounded edges */
             cursor: pointer;
             transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
         }
@@ -310,11 +309,11 @@
             width: 100%;
             max-width: 600px;
             height: 80%;
-            background: #2c2f33;
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Match banner theme */
             color: white;
-            padding: 20px;
-            border-radius: 16px 16px 0 0;
-            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
+            padding: 25px; /* Add more padding */
+            border-radius: 20px; /* More rounded edges */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow for depth */
             z-index: 1000;
             overflow: hidden;
             flex-direction: column;
@@ -350,15 +349,15 @@
             overflow-y: auto;
             padding: 15px;
             margin-bottom: 15px;
-            background: #23272a; /* Slightly lighter background for contrast */
-            border-radius: 12px;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.1); /* Transparent background */
+            border-radius: 12px; /* Rounded edges */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Add depth */
         }
         .chat-message {
             margin-bottom: 10px;
             padding: 12px 15px;
             border-radius: 12px;
-            background: #5865f2; /* Modern blue for AI messages */
+            background: rgba(255, 255, 255, 0.2); /* Transparent background */
             color: white;
             max-width: 75%;
             font-size: 0.95rem;
@@ -367,7 +366,7 @@
         }
         .chat-message.user {
             align-self: flex-end;
-            background: #4caf50; /* Green for user messages */
+            background: rgba(106, 17, 203, 0.8); /* Match theme */
         }
         .chat-input-container {
             display: flex;
@@ -382,29 +381,35 @@
             flex: 1;
             padding: 15px;
             border: none;
-            border-radius: 8px;
+            border-radius: 25px; /* Rounded edges */
             font-size: 1rem;
             outline: none;
-            background: #40444b; /* Modern input background */
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Match banner theme */
             color: white;
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Add hover effect */
         }
         .ask-ai-input::placeholder {
             color: #b9bbbe; /* Subtle placeholder color */
         }
+        .ask-ai-input:hover {
+            background: linear-gradient(to right, #8a2be2, #3b82f6); /* Brightened gradient */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+            transform: scale(1.02); /* Slightly enlarge */
+        }
         .send-button {
             padding: 12px 20px;
-            background: #5865f2;
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Match banner theme */
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 25px; /* Rounded edges */
             cursor: pointer;
             font-size: 1rem;
             font-weight: bold;
             transition: background 0.3s ease, transform 0.2s ease;
         }
         .send-button:hover {
-            background: #4752c4; /* Darker blue on hover */
+            background: linear-gradient(to right, #8a2be2, #3b82f6); /* Brightened gradient */
             transform: scale(1.05);
         }
         .feedback-modal {
@@ -415,11 +420,11 @@
             transform: translate(-50%, -50%);
             width: 90%;
             max-width: 500px;
-            background: #2c2f33; /* Match theme */
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Match banner theme */
             color: white;
-            padding: 20px;
-            border-radius: 16px; /* Curved box */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            padding: 25px; /* Add more padding for a modern look */
+            border-radius: 20px; /* More rounded edges */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow for depth */
             z-index: 1000;
         }
         .feedback-modal.open {
@@ -428,8 +433,9 @@
         .feedback-modal h2 {
             text-align: center;
             margin-bottom: 20px;
-            font-size: 1.8rem;
-            color: #6a11cb; /* Match theme */
+            font-size: 2rem; /* Modernize font size */
+            font-weight: 700; /* Make it bold */
+            color: white; /* Ensure text contrast */
         }
         .feedback-modal input,
         .feedback-modal textarea {
@@ -437,22 +443,28 @@
             padding: 15px;
             margin: 10px 0;
             border: none;
-            border-radius: 8px;
-            background: #40444b; /* Match theme */
+            border-radius: 12px; /* More rounded edges */
+            background: rgba(255, 255, 255, 0.2); /* Transparent background */
             color: white;
             font-size: 1rem;
             outline: none;
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease; /* Add hover effect */
         }
         .feedback-modal input::placeholder,
         .feedback-modal textarea::placeholder {
             color: #b9bbbe; /* Subtle placeholder color */
         }
+        .feedback-modal input:hover,
+        .feedback-modal textarea:hover {
+            background: rgba(255, 255, 255, 0.3); /* Brighten on hover */
+            transform: scale(1.02); /* Slightly enlarge */
+        }
         .feedback-modal .submit-button {
             width: 100%;
             padding: 15px;
             margin-top: 20px;
-            background: #6a11cb; /* Match theme */
+            background: linear-gradient(to right, #8a2be2, #3b82f6); /* Brightened gradient */
             color: white;
             font-size: 1.2rem;
             font-weight: bold;
@@ -526,6 +538,83 @@
             top: 20px;
             opacity: 1;
         }
+        .waitlist-popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 400px;
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Match banner theme */
+            color: white;
+            padding: 20px;
+            border-radius: 16px; /* Rounded edges */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Add shadow for depth */
+            z-index: 1000;
+        }
+        .waitlist-popup.open {
+            display: block; /* Show when open */
+        }
+        .waitlist-popup .close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: red; /* Red close button */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .waitlist-popup .close-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(255, 0, 0, 0.5);
+        }
+        .waitlist-popup input {
+            width: calc(100% - 20px);
+            padding: 15px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .waitlist-popup input::placeholder {
+            color: #b9bbbe;
+        }
+        .waitlist-popup input:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.02);
+        }
+        .waitlist-popup .submit-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to right, #8a2be2, #3b82f6);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .waitlist-popup .submit-button:hover {
+            background: #4752c4;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -558,7 +647,7 @@
     </div>
     <div class="waitlist-section">
         <p>Releasing late 2025. Want to stay in touch? Join our waitlist!</p>
-        <button class="waitlist-button">Join Our Waitlist</button>
+        <button class="waitlist-button" onclick="openWaitlistPopup()">Join Our Waitlist</button>
     </div>
     <div class="scroll-arrow">↓</div>
     <div class="bottom-box-container" id="bottomBoxes">
@@ -612,6 +701,12 @@
             <button type="submit" class="submit-button">Submit</button>
         </form>
     </div>
+    <div class="waitlist-popup" id="waitlistPopup">
+        <button class="close-button" onclick="closeWaitlistPopup()">×</button>
+        <h2>Join Our Waitlist</h2>
+        <input type="email" placeholder="Enter your email" aria-label="Email" required />
+        <button class="submit-button" onclick="alert('Thank you for joining our waitlist!')">Submit</button>
+    </div>
     <script>
         function openModal() {
             const modal = document.getElementById('signupModal');
@@ -643,6 +738,16 @@
             feedbackModal.classList.remove('open'); // Hide feedback modal
             document.body.style.overflow = ''; // Restore background scrolling
         }
+        function openWaitlistPopup() {
+            const waitlistPopup = document.getElementById('waitlistPopup');
+            waitlistPopup.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+        function closeWaitlistPopup() {
+            const waitlistPopup = document.getElementById('waitlistPopup');
+            waitlistPopup.classList.remove('open');
+            document.body.style.overflow = ''; // Restore background scrolling
+        }
 
         // Show bottom boxes when scrolling
         window.addEventListener('scroll', () => {
@@ -663,6 +768,7 @@
                 closeModal();
                 closeAskAIModal();
                 closeFeedbackModal();
+                closeWaitlistPopup();
             }
         });
 
@@ -723,6 +829,15 @@
                 }
             }
         }
+
+        // Enable sending messages with the Enter key
+        const chatInput = document.getElementById('chatInput');
+        chatInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent default Enter behavior
+                sendMessage(); // Trigger the sendMessage function
+            }
+        });
 
         function showBetaMessage(event) {
             event.preventDefault(); // Prevent form submission
